@@ -9,39 +9,42 @@
 
   <body>
 
-    <div class="main-navbar-container" id="top">
+    <div class="main-navbar-container">
   		<div class="main-navbar">
-  			<div class="navbar-element"><a href="index.html">Joseph Kim</a></div>
+  			<a href="index.html" class="name-navbar-element">Joseph Kim</a>
   			<!-- start of navbar menu -->
   			<ul class="navbar">
-  				<li class="navbar-element"><a href="index.html">Home</a></li>
-  				<li class="navbar-element"><a href="about.html">About</a></li>
-  				<li class="navbar-dropdown"><a href="projects.html">Projects</a>
+  				<li><a href="index.html" class="navbar-element">Home</a></li>
+  				<li><a href="about.html" class="navbar-element">About</a></li>
+  				<li class="navbar-dropdown"><a href="projects.html" class="navbar-element">Projects</a>
   					<!-- start of project submenu -->
   					<ul class="projects-menu">
-  						<li><a href="projects.html">Project 1</a></li>
-  						<li><a href="projects.html">Project 2</a></li>
-  						<li><a href="projects.html">Project 3</a></li>
-  						<li><a href="projects.html">Project 4</a></li>
+  						<li><a href="projects.html" class="dropdown-element">Projects</a></li>
+  						<li><a href="projects.html" class="dropdown-element">Projects</a></li>
+  						<li><a href="projects.html" class="dropdown-element">Projects</a></li>
   					</ul>
   					<!-- end of project submenu -->
   				</li>
-  				<li class="navbar-element"><a href="contact.html">Contact</a></li>
+  				<li><a href="contact.html" class="navbar-element">Contact</a></li>
   			</ul>
   			<!-- end of navbar menu -->
   		</div>
   	</div>
 
     <div class="content">
-      <h1>About Me</h1>
+      <div class="about-content-box">
+        <h1>About Me</h1>
 
-      <p>
-        Hello there and welcome to my page! As you can probably see, this page is still a work in progress, but I am hoping to have it looking much nicer soon enough.
-      </p>
+        <img src="../images/me.png" width='400' alt="A picture of me!"/>
 
-      <p>
-        I am an incoming third year student studying Computer Science at the University of California, Los Angeles. I only recently switched into the major this past summer, and have been working diligently to learn everything I can to catch up to my peers. I have been playing around with frameworks such as NodeJS and ReactJS to learn web development and make sites like this one! I am eager to further explore the world of programming and am excited to build bigger and better things in the near future!
-      </p>
+        <p class="content-box-text">
+          Hello there and welcome to my page! As you can probably see, this page is still a work in progress, but I am hoping to have it looking much nicer soon!
+        </p>
+
+        <p class="content-box-text">
+          I am an incoming third year student studying Computer Science at the University of California, Los Angeles. I only recently switched into the major this past summer, and have been working diligently to learn everything I can to catch up to my peers. I have been playing around with frameworks and libraries such as NodeJS and ReactJS to learn web development and make sites like this one! I am eager to further explore the world of programming and am excited to build bigger and better things in the near future!
+        </p>
+      </div>
     </div>
 
     <div class="footer">

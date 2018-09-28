@@ -8,28 +8,18 @@
 }
 
 body {
+  background-color: #C4DFE6;
   color: #5A4D4C;
   text-align: center;
+  font-size: 16px;
   font-family: "Helvetica Neue", "Helvetica", "Verdana", "Sans-serif";
 }
 
-@media only screen and (max-width: 400px) {
-  body {
-    color: #F09A9D;
-  }
+a {
+  text-decoration: none;
+  color: #66A5AD;
 }
 
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-  body {
-    color: #B2D6FF;
-  }
-}
-
-@media only screen and (min-width: 961px) {
-  body {
-    color: #5A4D4C;
-  }
-}
 
 
 /*/////////////////////////////////*/
@@ -38,13 +28,11 @@ body {
 
 
 .main-navbar-container {
-  display: flex;
-  justify-content: center;
+  overflow: hidden;
 }
-
 .main-navbar {
   width: 100%;
-  padding: 5px;
+  height: 60px;
   background: #C4DFE6;
 
   position: fixed;
@@ -52,80 +40,94 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar li:hover {
+  background-color: #C4EFE6;
+  /* padding: 21px 20px; */
+}
 
 .navbar > li {
   display: inline;
+
+  transition: all 0.2s ease-in-out;
 }
 
-a {
-  text-decoration: none;
-  color: #66A5AD;
+
+.name-navbar-element {
+  padding: 21px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.2s ease-in-out;
 }
+.name-navbar-element:hover {
+  background-color: #C4EFE6;
+  padding: 21px 20px;
+}
+
 
 .navbar-element {
-  padding: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 30px;
-  width: 150px;
-  margin-left: 2px;
-  margin-right: 2px;
+  padding: 21px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.navbar-element:hover {
+/* .navbar-element:hover {
   background-color: #C4EFE6;
-  border-radius: 5px;
+  padding: 21px 20px;
+} */
 
-  padding: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 150px;
-  margin-left: 2px;
-  margin-right: 2px;
-}
 
 .navbar-dropdown {
-  padding: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 30px;
-  width: 150px;
-  margin-left: 2px;
-  margin-right: 2px;
-
   position: relative;
 }
-
 .navbar-dropdown > a {
   z-index: 2;
+  /* only positioned elements pay attention to their z-index property */
   position: relative;
   cursor: pointer;
 }
 
 .projects-menu {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-2em);
+  z-index: -1;
+  transition: all 0.2s ease-in-out 0s;
+  /* , visibility 0s linear 0.3s, z-index 0s linear 0.01s; */
 }
 
 .navbar-dropdown:hover .projects-menu {
   display: flex;
   flex-direction: column;
-  background: #9bc4cf;
-  border-radius: 5px;
-  width: 90px;
+  background: #C4EFE6;
 
-  padding-top: 35px;
-
-  position: absolute;
-  top: 0px;
-  left: 5px;
-
+  visibility: visible;
+  opacity: 1;
   z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s;
+  /* , 0s, 0.3s; */
 }
 
 .projects-menu li {
   list-style: none;
-  padding: 5px;
-  margin: 5px;
+}
+
+.dropdown-element {
+  padding: 14px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -135,10 +137,38 @@ a {
 
 
 .content {
-  background-color: #EEEEEE;
+  background-color: #FFFFFF;
   overflow: hidden;
-  height: 1000px;
-  margin-top: 40px;
+  margin-top: 60px;
+}
+
+.about-content-box {
+  background-color: #FAFAFA;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content-box-1 {
+  background-color: #FAFAFA;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content-box-2 {
+  background-color: #DADADA;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content-box-3 {
+  background-color: #BABABA;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1 {
@@ -155,29 +185,27 @@ img {
 }
 
 h2 {
-  margin: 20px;
-  /* font-weight: normal; */
+  margin: 20px auto;
 }
 
 p {
   margin: 20px auto;
-  width: 500px;
 }
 
-/* ul {
-  list-style-type: none;
-  padding: 5px;
-  margin: 10px auto;
-} */
-
-.contact-box {
+.content-box-text {
   width: 500px;
-  margin: 0px auto;
 }
 
 .contact {
   font-family: "Verdana";
+  display: inline;
 }
+.contact-type {
+  padding: 14px 10px;
+  width: 200px;
+  height: 100px;
+}
+
 
 .button {
   /* color: #186A3B; */
@@ -187,38 +215,35 @@ p {
   padding: 20px;
   border: 3px solid #07575B;
   border-radius: 5px;
-  margin: 20px auto;
-  width: 500px;
+  margin: 20px 20px;
   box-sizing: border-box;
-  /* margin-left: 500px;
-  margin-right: 500px; */
   /* <a> is inline element by default */
   display: block;
 }
-
 .button:hover {
   background-color: #C4EFE6;
 }
-
 .button:active {
   background-color: #07575B;
   border: 3px solid #C4EFE6;
 }
+
 
 .column-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .column {
   float: left;
   width: 31%;
-  margin: 20px 1.15%;
-  /* width: 100px;
-  margin: 20px; */
-  height: 20px;
-  background-color: #FFF;
+  margin: 20px 1.5%;
+  height: 500px;
+  background-color: #FAFAFA;
+}
+
+.project-description {
+  width: 90%;
 }
 
 
@@ -237,13 +262,75 @@ p {
   color: #66A5AD;
   background-color: #C4DFE6;
   width: 100%;
-  height: 50px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-address {
+#bottom {
   clear: both;
   margin: 10px;
+}
+
+
+
+/*//////////////////////////////////*/
+/*            responsive            */
+/*//////////////////////////////////*/
+
+/* mobile */
+@media only screen and (max-width: 400px) {
+  /* body {
+    color: #F09A9D;
+  } */
+
+  h1 {
+    width: 300px;
+  }
+
+  .content-box-text {
+    width: 350px;
+  }
+}
+
+/* smaller tablet */
+@media only screen and (min-width: 401px) and (max-width: 650px) {
+  /* body {
+    color: #B2D6FF;
+  } */
+
+  h1 {
+    width: 350px;
+  }
+
+  .content-box-text {
+    width: 350px;
+  }
+
+  /* .toggle {
+    display: block;
+  } */
+}
+
+/* bigger tablet */
+@media only screen and (min-width: 651px) and (max-width: 960px) {
+  /* body {
+    color: #B2D6FF;
+  } */
+
+  h1 {
+    width: 400px;
+  }
+
+  .content-box-text {
+    width: 400px;
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 961px) {
+  /* body {
+    color: #5A4D4C;
+  } */
 }

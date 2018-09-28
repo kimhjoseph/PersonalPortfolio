@@ -4,6 +4,8 @@
 <head>
 
 	<meta charset="UTF-8"/>
+	<!-- disable zooming on mobile devices for responsive design -->
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 	<title>Joseph Kim</title>
 	<link rel="stylesheet" href="../public/styles.css" type="text/css"/>
 
@@ -11,24 +13,23 @@
 
 <body>
 
-	<div class="main-navbar-container" id="top">
+	<div class="main-navbar-container">
 		<div class="main-navbar">
-			<div class="navbar-element"><a href="index.html">Joseph Kim</a></div>
+			<a href="index.html" class="name-navbar-element">Joseph Kim</a>
 			<!-- start of navbar menu -->
 			<ul class="navbar">
-				<li class="navbar-element"><a href="index.html">Home</a></li>
-				<li class="navbar-element"><a href="about.html">About</a></li>
-				<li class="navbar-dropdown"><a href="projects.html">Projects</a>
+				<li><a href="index.html" class="navbar-element">Home</a></li>
+				<li><a href="about.html" class="navbar-element">About</a></li>
+				<li class="navbar-dropdown"><a href="projects.html" class="navbar-element">Projects</a>
 					<!-- start of project submenu -->
 					<ul class="projects-menu">
-						<li><a href="projects.html">Project 1</a></li>
-						<li><a href="projects.html">Project 2</a></li>
-						<li><a href="projects.html">Project 3</a></li>
-						<li><a href="projects.html">Project 4</a></li>
+						<li><a href="projects.html" class="dropdown-element">Projects</a></li>
+						<li><a href="projects.html" class="dropdown-element">Projects</a></li>
+						<li><a href="projects.html" class="dropdown-element">Projects</a></li>
 					</ul>
 					<!-- end of project submenu -->
 				</li>
-				<li class="navbar-element"><a href="contact.html">Contact</a></li>
+				<li><a href="contact.html" class="navbar-element">Contact</a></li>
 			</ul>
 			<!-- end of navbar menu -->
 		</div>
@@ -36,28 +37,28 @@
 
 
 	<div class="content">
-		<!-- <a href="#bottom" class="button">Bottom!</a> -->
+		<div class="content-box-1">
+			<h1>Joseph Kim</h1>
 
-		<h1>Joseph Kim</h1>
+			<p>Welcome To My Page!</p>
+		</div>
 
-		<img src="../images/me.png" width='400' alt="A picture of me!"/>
+		<!-- <div class="content-box-2">
+			<h1>About Me</h1>
+		</div>
 
-		<p>Welcome To My Page!</p>
-
-		<!-- <div class="column-container">
-			<div class="column"></div>
-			<div class="column"></div>
-			<div class="column"></div>
+		<div class="content-box-3">
+			<h1>Projects</h1>
 		</div> -->
 
-		<!-- <a href="#top" class="button">Top!</a> -->
+		<!-- <a href="#top" class="button">^</a> -->
 	</div>
 
 
 	<div class="footer">
-		<address id="bottom">
+		<div id="bottom">
 			2018 Joseph Kim
-		</address>
+		</div>
 	</div>
 
 </body>
