@@ -3,27 +3,29 @@
 IN PROGRESS
 IN PROGRESS
 IN PROGRESS
+IN PROGRESS
+IN PROGRESS
 
-### TODO:
+## TODO:
 - Include more content!!!
-  - Home
+  - Home Page
     - More info, maybe quick facts/summary about myself
-  - About
+  - About Page
     - More background info, hobbies, orgs, etc.
-  - Projects
+  - Projects Page
     - Highlight relevant projects (give each project its own block?)
-  - Contact
+  - Contact Page
     - Add icons to each form of contact
     - Include a contact form users can fill out
 - Implement more responsive features
   - Images
   - Navbar
     - Make compatible for smaller/mobile devices
-- Incorporate Bootstrap?
+- Bootstrap?
 
-### Skills Learned & Used:
+## Skills Learned & Used/To Be Used:
 - HTML
-- Links and Images
+  - Links and Images
 - CSS
   - The Box Model
   - Selectors
@@ -34,3 +36,4 @@ IN PROGRESS
 - Semantic HTML
 - Forms
 - Web Typography
+- Bootstrap
