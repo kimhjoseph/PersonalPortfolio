@@ -21,7 +21,7 @@ IN PROGRESS
   - Images
   - Navbar
     - Make compatible for smaller/mobile devices
-- Bootstrap?
+- Try utilizing Bootstrap?
 
 ## Skills Learned & Used/To Be Used:
 - HTML

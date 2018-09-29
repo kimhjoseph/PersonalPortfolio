@@ -151,7 +151,7 @@ a {
 }
 .content-box-1 {
   background-color: #FAFAFA;
-  height: 550px;
+  height: 680px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -236,8 +236,8 @@ p {
 }
 .column {
   float: left;
-  width: 31%;
-  margin: 20px 1.5%;
+  width: 32%;
+  margin: 20px 0.5%;
   height: 500px;
   background-color: #FAFAFA;
 }
